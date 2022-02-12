@@ -10,7 +10,7 @@
 
       <div class="d-flex justify-content-around">
         <% @lists.each do |list| %>
-          <div class="card" style="width: 18rem;">
+          <div class="card" style="width: 18rem; margin: 0px 5px;">
             <%= image_tag "janos-venczak-EmDe2QylecI-unsplash.jpg", :class => "card-img-top" %>
             <div class="card-body">
               <p class="card-text"><%= link_to list.name, list_path(list) %></p>
