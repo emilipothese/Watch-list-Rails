@@ -1,6 +1,6 @@
 <h1><%= @list.name %></h1>
 
-<button type="button" name="button"><%= link_to 'Add a movie', new_bookmark_path(@list) %></button>
+<button type="button" name="button"><%= link_to 'Add a movie', new_list_bookmark_path(@list) %></button>
 <ul>
   <% @list.movies.each do |movie| %>
     <li><%= movie.title %> <%= movie.rating %> <%= movie.overview %></li>

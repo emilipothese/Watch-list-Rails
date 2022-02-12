@@ -1,10 +1,28 @@
+<header>
+  <h1>Save any kind of movies</h1>
+</header>
 
-<h1>My lists</h1>
+<div class="container">
 
-<% @lists.each do |list| %>
-  <h2><%= link_to list.name, list_path(list) %></h2>
-<% end %>
+  <div class="row">
+    <div class="col-12 col-sm-9">
+      <h2>My lists</h2>
 
-<hr>
-<button type="button" name="button"><%= link_to "Create a movie list", new_list_path %>
-</button>
+      <div class="d-flex justify-content-around">
+        <% @lists.each do |list| %>
+          <div class="card" style="width: 18rem;">
+            <%= image_tag "janos-venczak-EmDe2QylecI-unsplash.jpg", :class => "card-img-top" %>
+            <div class="card-body">
+              <p class="card-text"><%= link_to list.name, list_path(list) %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-3">
+      <button type="button" class="btn btn-success"><%= link_to "Create a movie list", new_list_path %>
+      </button>
+    </div>
+  </div>
+</div>
